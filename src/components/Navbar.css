@@ -1,0 +1,37 @@
+/* Navbar Stili */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff9aa2, #a2d5f2, #b5e7a0);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f4f9;
+}
