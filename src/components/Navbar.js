@@ -5,7 +5,7 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <h1 className="logo">Kişilik Testi</h1>
+      <h1 className="logo">SenKimSin?</h1>
       <ul className="nav-links">
         <li><Link to="/">Anasayfa</Link></li>
         <li><Link to="/tests">Testler</Link></li>

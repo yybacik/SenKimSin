@@ -9,7 +9,6 @@ function Home() {
         Kişiliğinizi keşfetmek ve kendinizi daha yakından tanımak için sizi testlerimize davet ediyoruz.
       </p>
 
-      {/* Test Tanıtım Kutuları */}
       <div className="home-test-section">
         <h2 className="home-test-title">Popüler Testlerimiz</h2>
         <div className="home-test-cards">
@@ -31,7 +30,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Yeni Eklenenler */}
       <div className="home-new-tests">
         <div className="home-new-tests-marquee">
           <h2>🆕 Yeni Eklenenler 🆕 Yeni Eklenenler 🆕 Yeni Eklenenler 🆕 Yeni Eklenenler 🆕 Yeni Eklenenler 🆕 Yeni Eklenenler 🆕 Yeni Eklenenler</h2>
@@ -43,7 +41,6 @@ function Home() {
         </ul>
       </div>
 
-      {/* Örnek Test Sonucu */}
       <div className="home-example-result">
         <h2 className="home-example-result-title">📊 Örnek Test Sonucu: MBTI Testi</h2>
         <div className="home-example-result-content">
@@ -56,7 +53,6 @@ function Home() {
           <p>
             Kelebek gibi, değişime açıksınız ve her yeni fırsatta hayatın tadını çıkarıyorsunuz.
           </p>
-          {/* PDF Bağlantısı */}
           <a
             href="/documents/example-mbti-result.pdf"
             target="_blank"
