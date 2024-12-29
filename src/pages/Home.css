@@ -58,7 +58,7 @@
 }
 
 .home-test-button {
-  background-color: #ff9aa2;
+  background: linear-gradient(90deg, #ff9aa2, #a2d5f2, #b5e7a0);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -68,7 +68,7 @@
 }
 
 .home-test-button:hover {
-  background-color: #f67a84;
+  background: linear-gradient(90deg, #a2d5f2, #b5e7a0, #ff9aa2);
 }
 
 .home-new-tests {
