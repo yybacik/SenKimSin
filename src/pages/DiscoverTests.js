@@ -4,8 +4,7 @@ import './DiscoverTests.css';
 function DiscoverTests() {
   function handleDiscoverTestsClick() {
     console.log("Big Five (Beş Faktör) Kişilik Testi'ne başla butonuna tıklandı.");
-    // İsterseniz yönlendirme yapabilirsiniz
-    // navigate('/big-five-test');
+
   }
 
   return (
