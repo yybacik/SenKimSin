@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './DiscoverTests.css';
 
 function DiscoverTests() {
-  function handleDiscoverTestsClick() {
-    console.log("Big Five (Beş Faktör) Kişilik Testi'ne başla butonuna tıklandı.");
+  const navigate = useNavigate();
 
-  }
+  const handleDiscoverTestDetails = (id) => {
+    navigate(`/test/${id}/details`);
+  };
 
   return (
     <div className="discover-tests-page">
@@ -23,7 +25,12 @@ function DiscoverTests() {
             <li>Judging (Yargılama) - Perceiving (Algılama)</li>
           </ul>
           <p>Bu testi çözerek hangi kişilik tipine ait olduğunuzu öğrenebilir ve güçlü ve zayıf yönlerinizi keşfedebilirsiniz.</p>
-          <button className="discover-start-button">Teste Başla</button>
+          <button
+            className="discover-start-button"
+            onClick={() => handleDiscoverTestDetails(1)}
+          >
+            Testi İncele
+          </button>
         </div>
 
         <div className="discover-test-card">
@@ -37,7 +44,12 @@ function DiscoverTests() {
             <li><strong>Duygusal Denge (Neuroticism):</strong> Duygusal olarak ne kadar dengeli ve stresle nasıl başa çıktığınız.</li>
           </ul>
           <p>Bu testi çözerek bu beş faktördeki güçlü ve zayıf yönlerinizi keşfedebilir ve kendinizi daha iyi anlayabilirsiniz.</p>
-          <button className="discover-start-button" onClick={handleDiscoverTestsClick}>Teste Başla</button>
+          <button
+            className="discover-start-button"
+            onClick={() => handleDiscoverTestDetails(2)}
+          >
+            Testi İncele
+          </button>
         </div>
 
         <div className="discover-test-card">
@@ -50,7 +62,12 @@ function DiscoverTests() {
             <li><strong>Conscientiousness (C):</strong> Detay odaklı, kuralcı ve analitik bireyler.</li>
           </ul>
           <p>Bu testi çözerek iş hayatında ve günlük hayatta nasıl davrandığınızı anlayabilir ve takım içindeki rolünüzü daha iyi kavrayabilirsiniz.</p>
-          <button className="discover-start-button">Teste Başla</button>
+          <button
+            className="discover-start-button"
+            onClick={() => handleDiscoverTestDetails(3)}
+          >
+            Testi İncele
+          </button>
         </div>
       </div>
     </div>

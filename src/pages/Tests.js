@@ -46,9 +46,13 @@ function Tests() {
   const handleDiscoverTestsClick = () => {
     navigate('/discover');
   };
+
+  const handleViewTestDetails = (id) => {
+    navigate(`/test/${id}/details`);
+  };
+
   return (
     <div className="tests-page">
-
       <section className="introduction-section">
         <h1>Kendinizi Keşfedin!</h1>
         <p className="introduction-text">
@@ -57,7 +61,6 @@ function Tests() {
         </p>
         <button className="cta-button" onClick={handleDiscoverTestsClick}>Testleri Keşfet</button>
       </section>
-
 
       <h1>Testler</h1>
       <p>Aşağıdaki testleri çözerek kendinizi daha iyi tanıyabilirsiniz.</p>
@@ -69,7 +72,12 @@ function Tests() {
             <p className="test-description">{test.description}</p>
             <p><strong>Tür:</strong> {test.type}</p>
             <p><strong>Zorluk:</strong> {test.difficulty}</p>
-            <button className="start-button">Teste Başla</button>
+            <button
+              className="start-button"
+              onClick={() => handleViewTestDetails(test.id)}
+            >
+              Testi İncele
+            </button>
           </div>
         ))}
       </div>
