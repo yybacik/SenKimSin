@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import './TestDetails.css';
 
 const testData = [
   {
@@ -28,14 +29,16 @@ function TestDetails() {
   };
 
   return (
-    <div>
+    <div className="test-details-page">
       <h1>{test.title}</h1>
       <p>{test.description}</p>
       <p><strong>Tür:</strong> {test.type}</p>
       <p><strong>Zorluk:</strong> {test.difficulty}</p>
       <p><strong>Süre:</strong> {test.duration}</p>
       <p><strong>Soru Sayısı:</strong> {test.questionCount}</p>
-      <button onClick={handleStartTest}>Teste Başla</button>
+      <button className="start-test-button" onClick={handleStartTest}>
+        Teste Başla
+      </button>
     </div>
   );
 }

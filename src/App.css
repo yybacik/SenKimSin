@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
 }
 
 .App {
@@ -32,15 +32,15 @@ body {
 
 .cta-button {
   display: inline-block;
-  background-color: #3498db;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #2980b9;
+  opacity: 0.85;
 }
