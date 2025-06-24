@@ -28,3 +28,12 @@ test('/tests yolunda testler sayfası yüklenir', () => {
   );
   expect(screen.getByText(/Kendinizi Keşfedin!/i)).toBeInTheDocument();
 });
+
+test('/test/:id/details yolunda detay sayfası açılır', () => {
+  render(
+    <MemoryRouter initialEntries={['/test/1/details']}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByText(/Teste Başla/i)).toBeInTheDocument();
+});
