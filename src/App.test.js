@@ -1,8 +1,30 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('navbar başlığını görüntüler', () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByText(/SenKimSin\?/i)).toBeInTheDocument();
+});
+
+test('varsayılan olarak Anasayfa açılır', () => {
+  render(
+    <MemoryRouter initialEntries={['/']}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByText(/Hoş Geldiniz!/i)).toBeInTheDocument();
+});
+
+test('/tests yolunda testler sayfası yüklenir', () => {
+  render(
+    <MemoryRouter initialEntries={['/tests']}>
+      <App />
+    </MemoryRouter>
+  );
+  expect(screen.getByText(/Kendinizi Keşfedin!/i)).toBeInTheDocument();
 });
